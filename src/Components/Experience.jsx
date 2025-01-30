@@ -8,19 +8,19 @@ import {
   Box,
   Link,
 } from "@mui/material";
-import HTML5 from "../assets/html5.png";
-import CSS3 from "../assets/css3.png";
-import Javascript from "../assets/javascript.png";
-import ReactLogo from "../assets/react.png";
-import Bootstrap from "../assets/bootstrapIcon.png";
-import MaterialUI from "../assets/material-UI.png";
-import Postman from "../assets/postmanIcon.png";
-import Jira from "../assets/jira.png";
-import Putty from "../assets/putty.png";
-import TCSIcon from "../assets/tcsIcon1.png";
-import qTest from "../assets/qTest1.png";
-import Mainframe from "../assets/mainframe.png";
-import VsCode from "../assets/vscode.png";
+import HTML5 from "../assets/HTML5.png";
+import CSS3 from "../assets/CSS3.png";
+import Javascript from "../assets/Javascript.png";
+import ReactLogo from "../assets/React.png";
+import Bootstrap from "../assets/BootstrapIcon.png";
+import MaterialUI from "../assets/Material-UI.png";
+import Postman from "../assets/PostmanIcon.png";
+import Jira from "../assets/Jira.png";
+import Putty from "../assets/Putty.png";
+import TCSIcon from "../assets/TCSIcon1.png";
+import qTest from "../assets/QTest1.png";
+import Mainframe from "../assets/Mainframe.png";
+import VsCode from "../assets/VScode.png";
 import Carousel from "react-material-ui-carousel";
 
 export const Experience = () => {
