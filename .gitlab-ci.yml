@@ -1,0 +1,35 @@
+stages:
+  - build
+  - test
+
+# Build stage
+build:
+  stage: build
+  image: node:22.12.0
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+  only:
+    - branches
+
+# Test stage
+test:
+  stage: test
+  image: node:22.12.0
+  script:
+    - npm install
+    - npm run lint
+  only:
+    - branches
+
+# Optional: Error handling
+error:
+  stage: build
+  script:
+    - echo "An error occurred during the build stage"
+  when: on_failure
+  only:
+    - branches
