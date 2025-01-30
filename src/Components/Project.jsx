@@ -29,8 +29,8 @@ export const Project = () => {
         for optimized cross-device compatibility. Built in JSX format and developed in VS Code, 
         the project highlights professional experience, technical skills, and key projects. 
         The source code is maintained on GitHub and GitLab for version control and collaboration.`,
-      demo: "https://git",
-      sourceCode: "https://",
+      demo: `https://lithin1.github.io/Lithin-Portfolio/`,
+      sourceCode: `https://github.com/Lithin1/Lithin-Portfolio`
     },
     {
       id: 2,
@@ -66,7 +66,7 @@ export const Project = () => {
     <Stack
       id="Projects"
       direction="column"
-      maxWidth="2000px"
+      maxWidth="1500px"
       sx={{
         color: "white",
         backgroundColor: "#004080",
@@ -78,12 +78,12 @@ export const Project = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: isMobile ? "125vh" : "100vh",
+        height: isMobile ? "125vh" : "100%",
       }}
     >
       {/* Title Section */}
       <Typography
-        variant={!isMobile ? "h3" : "h4"}
+        variant="h4"
         color="inherit"
         sx={{
           textAlign: "center",
@@ -111,11 +111,13 @@ export const Project = () => {
             <Card
               key={proInfo.id}
               sx={{
-                width: "350px",
+                width:isMobile?"350px":"280px",
                 backgroundColor: "#001a33",
                 borderRadius: "12px",
                 overflow: "hidden",
                 height: "auto",
+                display:"flex",
+                flexDirection:"column"
               }}
             >
               {/* Card Image */}
@@ -123,18 +125,19 @@ export const Project = () => {
                 component="img"
                 alt={proInfo.title}
                 image={proInfo.proImg}
-                sx={{ width: 350, height: 250 }}
+                sx={{ width:isMobile? 350:280, height: isMobile?250 :"175px"}}
               />
               {/* Card Content */}
               <CardContent
                 sx={{
                   overflow: "hidden",
                   textOverflow: "ellipsis",
-                  height: "345px",
+                  height: isMobile ? "345px":"325px",
+                  width:"100%",
                 }}
               >
                 <Typography
-                  variant="h5"
+                  variant="h6"
                   sx={{
                     fontWeight: "500",
                     color: "white",
@@ -145,20 +148,17 @@ export const Project = () => {
                   {proInfo.title}
                 </Typography>
                 <Typography
-                  variant="body2"
-                  sx={{ color: "green", marginBottom: theme.spacing(1) }}
+                  sx={{fontSize:"13px", color: "green", marginBottom: theme.spacing(1) }}
                 >
                   {proInfo.status}
                 </Typography>
                 <Typography
-                  variant="body2"
-                  sx={{ color: "#808080", marginBottom: theme.spacing(1) }}
+                  sx={{fontSize:"13px", color: "#808080", marginBottom: theme.spacing(1) }}
                 >
                   {proInfo.tools}
                 </Typography>
                 <Typography
-                  variant="body2"
-                  sx={{ color: "#d9d9d9", marginBottom: theme.spacing(1) }}
+                  sx={{fontSize:"13px", color: "#d9d9d9", marginBottom: theme.spacing(1) }}
                 >
                   {proInfo.description}
                 </Typography>
@@ -174,6 +174,7 @@ export const Project = () => {
                 <Button
                   variant="contained"
                   href={proInfo.demo}
+                  size="small"
                   sx={{
                     borderRadius: "20px",
                     textTransform: "none",
@@ -182,6 +183,7 @@ export const Project = () => {
                   Demo
                 </Button>
                 <Button
+                  size="small"
                   variant="contained"
                   href={proInfo.sourceCode}
                   sx={{

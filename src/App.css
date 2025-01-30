@@ -1,11 +1,11 @@
 html,
-body {
+body, #root{
   margin: 0 auto;
-  padding: 40px 0px;
+  padding: 0 0;
   background-color: #00264d !important;
   font-family: "Roboto Slab";
   position: relative;
-  width: 100%;
+  width: auto;
   height: auto;
   scroll-behavior: smooth;
 }

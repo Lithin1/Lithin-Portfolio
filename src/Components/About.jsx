@@ -60,7 +60,7 @@ export const About = () => {
         direction={isMobile ? "column" : "row"}
         spacing={4}
         sx={{
-          maxWidth: "1200px",
+          maxWidth:"1200px",
           width: "100%",
           borderRadius: "25px",
           backgroundColor: "#002244",
@@ -93,7 +93,7 @@ export const About = () => {
             height="auto"
             style={{
               borderRadius: "12px",
-              maxWidth: isMobile ? "250px" : "800px",
+              maxWidth: isMobile ? "250px" : "400px",
             }}
           />
         </Stack>
@@ -131,10 +131,10 @@ export const About = () => {
                     {item.title}
                   </Typography>
                   <Typography
-                    variant="body1"
+                    variant="body2"
                     sx={{
                       lineHeight: 1.6,
-                      color: "white",
+                      color: "#d9d9d9",
                       wordWrap: "break-word",
                       whiteSpace: "normal",
                       maxWidth: "1200px",
@@ -146,7 +146,7 @@ export const About = () => {
               </Stack>
             ))
           ) : (
-            <Carousel indicators={true} interval={5000}>
+            <Carousel indicators={true} interval={10000}>
               {AboutItems.map((item) => (
                 <Box key={item.id}>
                   <Typography

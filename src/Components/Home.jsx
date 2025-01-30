@@ -16,7 +16,7 @@ export const Home = () => {
       id="Portfolio"
       direction={isMobile ? "column" : "row"}
       sx={{
-        maxWidth: "1200px",
+        maxWidth:"1200px",
         margin: "0 auto",
         padding: isMobile ? theme.spacing(4) : theme.spacing(8),
         gap: isMobile ? theme.spacing(4) : theme.spacing(6),
@@ -44,7 +44,7 @@ export const Home = () => {
       >
         <Typography
           variant={isMobile ? "h5" : "h3"}
-          sx={{ display: "flex", alignItems: "center" }}
+          sx={{ display: "flex", alignItems: "center", paddingTop:isMobile? "55px" :"auto"}}
         >
           Hello,&nbsp;
           <span

@@ -25,13 +25,13 @@ export const Contact = () => {
     },
     {
       id: 3,
-      href: "#",
+      href: `https://github.com/Lithin1`,
       contactTitle: "GitHub Page",
       icon: <Github size={30} color="#404040" />,
     },
     {
       id: 4,
-      href: "#",
+      href: `https://gitlab.com/grp-react-projects`,
       contactTitle: "GitLab Page",
       icon: <Gitlab size={30} color="#404040" />,
     },
@@ -55,7 +55,7 @@ export const Contact = () => {
         backgroundColor: "#121212",
         borderRadius: "15px",
         boxShadow: "10px 10px 20px rgba(22, 28, 128, 0.49)",
-        maxWidth: "2000px",
+        maxWidth: "1500px",
         minHeight: !isMobile ? "100vh" : "100vh",
         width: !isMobile ? "100%" : "60vh",
       }}
@@ -81,7 +81,7 @@ export const Contact = () => {
           display: "flex",
           alignItems: "flex-start",
           justifyContent: "center",
-          padding: !isMobile ? "25px 0px" : "20px 0px",
+          padding: !isMobile ? "25px" : "20px auto",
         }}
       >
         {contactInfo.map((info) => (
