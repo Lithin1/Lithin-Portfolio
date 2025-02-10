@@ -5,7 +5,7 @@ import {
   Button,
   useTheme,
 } from "@mui/material";
-import ProfileImg from '../assets/AI-image1.png'
+import ProfileImg from "../assets/AI-image1.png";
 
 export const Home = () => {
   const theme = useTheme();
@@ -16,14 +16,14 @@ export const Home = () => {
       id="Portfolio"
       direction={isMobile ? "column" : "row"}
       sx={{
-        maxWidth:"1200px",
+        maxWidth: "1200px",
         margin: "0 auto",
-        padding: isMobile ? theme.spacing(4) : theme.spacing(8),
-        gap: isMobile ? theme.spacing(4) : theme.spacing(6),
+        padding: isMobile ? theme.spacing(2) : theme.spacing(8),
+        gap: isMobile ? theme.spacing(0) : theme.spacing(6),
         textAlign: "start",
         alignItems: "center",
         justifyContent: "space-between",
-        minHeight: isMobile ? "70vh" : "100vh",
+        minHeight: isMobile ? "100%" : "100vh",
         overflow: "hidden",
         position: "relative",
         width: "100%",
@@ -39,12 +39,16 @@ export const Home = () => {
           borderRadius: "12px",
           color: "white",
           fontFamily: "Roboto",
-          maxWidth: "100%",
+          maxWidth: "auto",
         }}
       >
         <Typography
           variant={isMobile ? "h5" : "h3"}
-          sx={{ display: "flex", alignItems: "center", paddingTop:isMobile? "55px" :"auto"}}
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            paddingTop: isMobile ? "55px" : "auto",
+          }}
         >
           Hello,&nbsp;
           <span

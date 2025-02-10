@@ -73,7 +73,7 @@ export const Experience = () => {
       direction={isMobile ? "column" : "row"}
       maxWidth="lg"
       sx={{
-        height: !isMobile ? "100vh" : "125vh",
+        height: "100vh",
         margin: "0 auto",
         padding: isMobile ? theme.spacing(4) : theme.spacing(6),
         display: "flex",
@@ -81,7 +81,7 @@ export const Experience = () => {
         alignItems: "center",
         gap: isMobile ? theme.spacing(6) : theme.spacing(10),
         color: "white",
-        width: isMobile ? "60vh" : "auto",
+        width: "auto",
       }}
     >
       {/* Skills Section */}
@@ -91,12 +91,12 @@ export const Experience = () => {
         sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
         <Typography
-          variant={isMobile ? "h4" : "h3"}
+          variant={isMobile ? "h5" : "h3"}
           color="white"
           gutterBottom
           sx={{
             textAlign: "center",
-            paddingBottom: theme.spacing(3),
+            paddingBottom: isMobile ? theme.spacing(2) : theme.spacing(3),
             paddingTop: isMobile ? theme.spacing(4) : "0",
           }}
         >
@@ -115,7 +115,7 @@ export const Experience = () => {
           {IconsData.map((icon) => (
             <Grid
               item
-              xs={4}
+              xs={3}
               sm={3}
               md={2}
               key={icon.id}
@@ -243,7 +243,7 @@ export const Experience = () => {
             height: "auto",
           }}
         >
-          <Carousel indicators={true}>
+          <Carousel indicators={true} interval={5000}>
             {experienceData.map((item) => (
               <Stack
                 key={item.id}

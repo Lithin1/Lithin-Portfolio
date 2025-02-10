@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Stack, Typography, Box, useMediaQuery, useTheme } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Carousel from "react-material-ui-carousel";
-import AboutImg from '../assets/AI-image3.png'
+import AboutImg from "../assets/AI-image3.png";
 
 export const About = () => {
   const theme = useTheme();
@@ -23,8 +23,7 @@ export const About = () => {
       title: "Frontend Developer",
       description: `Experienced Frontend Developer specializing
          in building responsive, user-friendly web applications.
-         Proficient in React, JavaScript, and modern UI frameworks,
-         with a strong focus on performance, accessibility, and seamless user experiences.`,
+         Proficient in React, JavaScript, and modern UI frameworks.`,
     },
     {
       id: "2",
@@ -35,9 +34,9 @@ export const About = () => {
     {
       id: "3",
       title: "Software Test Engineer:",
-      description: `Experienced Manual Tester with a strong background
-         in API testing using Postman, writing and executing over 500 test cases manually.
-         Skilled in test case management through qTest, with seamless integration into Jira for tracking and reporting.`,
+      description: `Experienced Manual Tester with 
+      expertise in API testing using Postman, executing 500+ test cases manually. 
+      Proficient in qTest for test case management and seamless Jira integration for tracking.`,
     },
   ];
 
@@ -45,7 +44,7 @@ export const About = () => {
     <Box
       id="About"
       sx={{
-        minHeight: isMobile ? "115vh" : "100vh",
+        minHeight: "100vh",
         overflow: "hidden",
         display: "flex",
         justifyContent: "center",
@@ -53,19 +52,19 @@ export const About = () => {
         backgroundColor: "#001a33",
         boxSizing: "border-box",
         padding: isMobile ? theme.spacing(3) : theme.spacing(4),
-        width: isMobile ? "60vh" : "100%",
+        width: "100%",
       }}
     >
       <Stack
         direction={isMobile ? "column" : "row"}
         spacing={4}
         sx={{
-          maxWidth:"1200px",
+          maxWidth: "1200px",
           width: "100%",
           borderRadius: "25px",
           backgroundColor: "#002244",
           boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.3)",
-          overflow: "hidden", // Prevent content overflow
+          overflow: "hidden",
           color: "white",
           padding: theme.spacing(2),
           margin: "0 auto",
@@ -83,7 +82,7 @@ export const About = () => {
             maxWidth: "100%",
           }}
         >
-          <Typography variant={isMobile ? "h3" : "h2"} textAlign="center">
+          <Typography variant={isMobile ? "h4" : "h2"} textAlign="center">
             About
           </Typography>
           <img
@@ -93,7 +92,7 @@ export const About = () => {
             height="auto"
             style={{
               borderRadius: "12px",
-              maxWidth: isMobile ? "250px" : "400px",
+              maxWidth: isMobile ? "200px" : "400px",
             }}
           />
         </Stack>

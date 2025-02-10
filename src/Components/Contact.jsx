@@ -57,12 +57,12 @@ export const Contact = () => {
         boxShadow: "10px 10px 20px rgba(22, 28, 128, 0.49)",
         maxWidth: "1500px",
         minHeight: !isMobile ? "100vh" : "100vh",
-        width: !isMobile ? "100%" : "60vh",
+        width: !isMobile ? "100%" : "100vw",
       }}
     >
       <Stack sx={{ padding: !isMobile ? "25px 0px" : "20px 85px" }}>
         <Typography
-          variant={!isMobile ? "h2" : "h3"}
+          variant={!isMobile ? "h2" : "h4"}
           sx={{ color: "white", fontWeight: "400", padding: "35px 5px" }}
         >
           Contact
@@ -70,8 +70,8 @@ export const Contact = () => {
         <img
           src={CartoonImage}
           alt="AI Cartoon Image"
-          width={!isMobile ? "500px" : "260px"}
-          height={!isMobile ? "500px" : "250px"}
+          width={!isMobile ? "500px" : "180px"}
+          height={!isMobile ? "500px" : "auto"}
         />
       </Stack>
       <Stack
@@ -81,7 +81,7 @@ export const Contact = () => {
           display: "flex",
           alignItems: "flex-start",
           justifyContent: "center",
-          padding: !isMobile ? "25px" : "20px auto",
+          padding: !isMobile ? "25px" : "10px auto",
         }}
       >
         {contactInfo.map((info) => (
@@ -90,8 +90,8 @@ export const Contact = () => {
             spacing={2}
             key={info.id}
             sx={{
-              width: "350px",
-              height: "auto",
+              width: !isMobile ? "350px" : "310px",
+              height: "50px",
               backgroundColor: "#1E1E1E",
               borderRadius: "12px",
               padding: "8px",
@@ -103,8 +103,8 @@ export const Contact = () => {
               href={info.href}
               underline="none"
               sx={{
-                fontSize: "20px",
-                padding: "10px 5px",
+                fontSize: !isMobile ? "20px" : "15px",
+                padding: !isMobile ? "10px 5px" : "5px 5px",
                 transition: "0.3s",
                 "&:hover": {
                   backgroundColor: "#c48c6b",
@@ -119,7 +119,7 @@ export const Contact = () => {
               <Typography
                 color="white"
                 sx={{
-                  fontSize: "20px",
+                  fontSize: !isMobile ? "20px" : "15px",
                   fontWeight: "400",
                   padding: "10px 5px",
                   fontFamily: "monospace",
